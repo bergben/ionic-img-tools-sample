@@ -1,0 +1,13 @@
+page-overview {
+    ion-searchbar {
+        ion-icon {
+            color: map-get($colors, semidark);
+        }
+        input {
+            border-radius: 0 !important;
+        }
+    }
+    ion-segment {
+        margin-top: 1rem !important;
+    }
+}

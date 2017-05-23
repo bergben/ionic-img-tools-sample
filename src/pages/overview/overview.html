@@ -1,0 +1,35 @@
+<ion-header>
+    <ion-navbar>
+        <ion-grid>
+            <ion-row [hidden]="!showSearch" padding>
+                <ion-searchbar [(ngModel)]="searchText" [animated]="true" [showCancelButton]="true" (ionInput)="onSearchInput($event)" (ionCancel)="onSearchCancel($event)">
+                </ion-searchbar>
+            </ion-row>
+            <ion-row [hidden]="showSearch" padding>
+                <h1 ion-col item-left>Memorganize</h1>
+                <ion-icon ion-col col-auto item-right name="search" (tap)="toggleShowSearch()"></ion-icon>
+                <ion-icon ion-col col-auto item-right name="add" (tap)="pushAddPage()"></ion-icon>
+                <ion-icon ion-col col-auto item-right name="more" (tap)="showMenuPopover($event)"></ion-icon>
+            </ion-row>
+        </ion-grid>
+        <ion-segment [(ngModel)]="currentTab" color="light" [hidden]="showSearch">
+            <ion-segment-button value="contact">
+                <ion-icon name="contacts"></ion-icon>
+                Contacts
+            </ion-segment-button>
+            <ion-segment-button value="title">
+                <ion-icon name="filing"></ion-icon>
+                Titles
+            </ion-segment-button>
+            <ion-segment-button value="tag">
+                <ion-icon name="pricetags"></ion-icon>
+                Tags
+            </ion-segment-button>
+        </ion-segment>
+    </ion-navbar>
+</ion-header>
+
+
+<ion-content padding>
+    {{currentTab}}
+</ion-content>
