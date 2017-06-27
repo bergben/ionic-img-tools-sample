@@ -1,6 +1,6 @@
 {
-    "name": "memorganize",
-    "short_name": "memorganize",
+    "name": "ionic-img-tools-sample",
+    "short_name": "ionic-img-tools-sample",
     "start_url": "index.html",
     "display": "standalone",
     "icons": [{

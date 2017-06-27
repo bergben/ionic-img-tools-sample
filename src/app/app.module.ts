@@ -2,11 +2,10 @@ import { NgModule, ErrorHandler } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular';
 import { MyApp } from './app.component';
+import { Ng2ImgToolsModule  } from 'ng2-img-tools'
+import { Ng2FileInputModule } from 'ng2-file-input';
 
 import { AddPage } from '../pages/add/add';
-import { ProfilePage } from '../pages/profile/profile';
-import { OverviewPage } from '../pages/overview/overview';
-import { MenuPopover } from '../pages/popovers/menu-popover';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -14,22 +13,18 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 @NgModule({
   declarations: [
     MyApp,
-    AddPage,
-    ProfilePage,
-    OverviewPage,
-    MenuPopover
+    AddPage
   ],
   imports: [
     BrowserModule,
-    IonicModule.forRoot(MyApp)
+    IonicModule.forRoot(MyApp),
+    Ng2FileInputModule.forRoot(),
+    Ng2ImgToolsModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
-    AddPage,
-    ProfilePage,
-    OverviewPage,
-    MenuPopover
+    AddPage
   ],
   providers: [
     StatusBar,

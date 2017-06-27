@@ -1,7 +1,27 @@
 @import "../theme/variables.scss";
+body,
+span,
+button,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ion-item,
+ion-segment-button,
+ion-title {
+    font-family: 'Trebuchet MS', Arial !important;
+}
+
 ion-navbar {
     padding: 0 !important;
     min-height: 0 !important;
+    h1,
+    ion-title {
+        font-family: 'Walkway-Bold', Arial !important;
+    }
     .toolbar-background {
         background-color: map-get($colors, primary);
     }
@@ -9,7 +29,6 @@ ion-navbar {
         padding: 0 !important;
     }
     h1.col {
-        font-family: 'Walkway-Bold', Arial;
         margin: 0;
         padding: 0;
         letter-spacing: .17rem;
@@ -22,4 +41,11 @@ ion-navbar {
         padding: 0 1rem;
         margin-right: .5rem;
     }
+    .toolbar-title {
+        color: map-get($colors, light);
+    }
+}
+
+.popover-content ion-list {
+    margin: 0 !important;
 }
